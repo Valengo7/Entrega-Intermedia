@@ -1,0 +1,20 @@
+<form action="">
+    <h3>Busca un curso por su comision</h3>
+    <input type="text" name="comision" id="comision">
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+
+{% if cursos %}
+
+    <ul>
+    {% for curso in cursos %}
+        <li>Curso de {{curso.nombre}} con numero {{curso.comision}}</li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+    <p> No hay datos </p>
+{% endif %}
